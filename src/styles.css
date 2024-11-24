@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  
+    mat-card {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      video {
+        width: 48%;
+        height: auto;
+      }
+    }
+  }
+  

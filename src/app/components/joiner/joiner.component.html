@@ -1,0 +1,27 @@
+<div class="joiner-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Your Video</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <video #localVideo autoplay playsinline muted></video>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-form-field appearance="fill" class="host-code-field">
+      <mat-label>Host Code</mat-label>
+      <input matInput [(ngModel)]="hostCode" placeholder="Enter Host Code" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="connectToHost()">Connect to Host</button>
+  
+    <mat-card *ngIf="remoteStream">
+      <mat-card-header>
+        <mat-card-title>Host Video</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <video #remoteVideo autoplay playsinline></video>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
